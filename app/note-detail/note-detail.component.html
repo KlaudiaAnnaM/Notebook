@@ -1,0 +1,23 @@
+<div *ngIf="note">
+    <h2>{{note.name}}</h2>
+    <div id="input-wrapper">
+        <div class="input-block">
+            <label>id:</label>
+            <input [(ngModel)]="note.id" [disabled]="true" placeholder="id" />
+        </div>
+        <div class="input-block">
+            <label>name:</label>
+            <input [(ngModel)]="note.name" placeholder="name" />
+        </div>
+        <div class="input-block">
+            <label>content:</label>
+            <input [(ngModel)]="note.content" placeholder="content" />
+        </div>
+        <div class="input-block">
+            <label>url:</label>
+            <input [(ngModel)]="note.imgUrl" placeholder="url" />
+        </div>
+        <button (click)="goBack()">Back</button>
+        <button (click)="save()">Save</button>
+    </div>
+</div>

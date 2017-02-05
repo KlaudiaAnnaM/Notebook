@@ -1,0 +1,58 @@
+button {
+    background-color: white;
+    color: #33adff;
+    padding: 5px 5px; 
+    text-decoration: none;
+    display: inline-block;
+    border: solid 1px #33adff;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer; cursor: hand;
+}
+
+button:hover, button:active {
+    background-color: #33adff;
+    color: white;
+}
+
+input {
+  height: 50px;
+  font-size: 1em;
+  padding-left: 5px;
+  margin: 10px;
+  border: none;
+  cursor: pointer; cursor: hand;
+  
+}
+
+#input-wrapper {
+    text-align: center;
+    width: 500 px;
+    
+}
+
+label {
+     color: #33adff;
+     text-shadow: 1px 1px grey;
+     font-size: 120%;
+     font-weight: 6;
+     text-align: left;
+}
+
+.input-block {
+    margin-bottom: 10px; 
+    text-align: center;
+}
+
+.input-block label {
+    display: inline-block;
+    width: 100px;
+}
+
+.input-block input {
+    width: 350px;
+    font-size: 90%;
+    height: 85px;
+}
+
+

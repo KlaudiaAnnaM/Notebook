@@ -1,0 +1,34 @@
+<h2>My notes:</h2>
+<div id="input-wrapper">
+  <div class="input-block">
+    <span>Note name:</span> <input #noteName/>
+  </div>
+  <div class="input-block">
+    <span>Note url:</span> <input #noteUrl/>
+  </div>
+  <div class="input-block">
+    <span class="input-area">Note content:</span> <textarea #noteContent rows="3" cols="30"></textarea>
+  </div>
+  <button (click)="add(noteName.value, noteContent.value, noteUrl.value); noteName.value=''; noteContent.value=''; noteUrl.value=''">
+    Add
+  </button>
+</div>
+<ul *ngIf="notes.length>0" class="notes">
+  <li *ngFor="let note of notes" [class.selected]="note === selectedNote" (click)="onSelect(note)">
+    <span class="badge">{{note.id}}</span>
+    <span class="badge">{{note.name}}</span>
+    <button class="delete" (click)="delete(note); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedNote">
+  <h3>
+    {{selectedNote.name | uppercase}}
+  </h3>
+  <h4>
+    {{selectedNote.content}}
+  </h4>
+  <h5>
+    <img *ngIf="selectedNote.imgUrl" height="200" src="{{selectedNote.imgUrl}}">
+  </h5>
+  <button (click)="gotoDetail()">edit</button>
+</div>
